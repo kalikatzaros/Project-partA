@@ -13,7 +13,7 @@ namespace partA
         public DateTime DateOfBirth { get; set; }
         public double TuitionFees { get; set; }
         public List<Assignment> Assignments = new List<Assignment>();
-        public Dictionary<Course,Assignment> AssignmentsPerCourse { get; set; } = new Dictionary<Course,Assignment>();
+     
         public string Fullname
         {
             get { return $"{FirstName} {LastName}"; }
