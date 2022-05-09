@@ -135,6 +135,7 @@ namespace partA
                 case ConsoleKey.D1:
                     Console.Clear();
                     ListAllCourses();
+                    DisplayCoursesMenu();
                     break;
                 case ConsoleKey.D2:
                     Console.Clear();
@@ -380,9 +381,9 @@ namespace partA
             CourseType courseType = (CourseType)type;
             Console.WriteLine("Enter Stream:");
             string stream = Console.ReadLine();
-            Console.WriteLine("Enter Start Date:");
+            Console.WriteLine("Enter Start Date: (year,month,date)");
             DateTime startDate = Convert.ToDateTime(Console.ReadLine());
-            Console.WriteLine("Enter End Date:");
+            Console.WriteLine("Enter End Date: (year,month,date)");
             DateTime endDate = Convert.ToDateTime(Console.ReadLine());
             var course = new Course(title, courseType, stream, startDate, endDate);
             AllCourses.Add(course);
