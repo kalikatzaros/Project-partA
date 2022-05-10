@@ -35,7 +35,7 @@ namespace partA
             Console.WriteLine("EnterDescription:");
             string description = Console.ReadLine();
             Description = (description == string.Empty) ? Description : description;
-            Console.WriteLine("Enter Submission Date:");
+            Console.WriteLine("Enter Submission Date: (year-month-day");
             try
             {
                 DateTime subDate = Convert.ToDateTime(Console.ReadLine());
@@ -43,7 +43,7 @@ namespace partA
             }
             catch(Exception e)
             {
-                Console.WriteLine("Invalid Date");
+                Console.WriteLine("Invalid Date",e);
                 SubDateTime = SubDateTime;
             }
             Console.Clear();
